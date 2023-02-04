@@ -1,0 +1,30 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+:root{
+    font-size: 21px;
+    background-color: #FFFFFF;
+    color: black;
+    --accent: rgb(62, 172,171);
+    --accent2: rgb(11, 139, 137);
+    --accent3: rgb(7, 94, 92);
+    --accent4: #6CA8A7;
+    --accent5: #2e9b99;
+    font-family: 'Roboto Slab', serif;
+
+    --font-handwriting: 'Edu SA Beginner';
+    scroll-behavior: smooth;
+
+}
+
+ 
+@media only screen (max-width: 700px) {
+    
+}

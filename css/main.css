@@ -26,6 +26,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 }
 
+
+
 .head{
     display: flex;
     align-items: center;
@@ -96,8 +98,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 
-
-
 .card-container{
     display: grid;
     margin-top: 2rem;
@@ -129,6 +129,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin-top: 1rem;
     width: 90%;
     margin-left: 0.6rem;
+    margin-bottom: 1rem;
+    max-height: fit-content;
     /* margin: 1rem; */
 }
 
@@ -149,6 +151,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     box-shadow: 8px 10px 12px 01px rgba(0,0,0,0.4);
     transition: 0.5s;
     background-color: #f5f5f5;
+    max-width: fit-content;
 
 }
 
@@ -223,20 +226,15 @@ body::-webkit-scrollbar-thumb{
     background: purple;
 }
 
-.main{
-    margin-left: 3.1rem;
-    padding-top: 2rem;
-}
+
 
 .nav{
-    height: 100vh;
-    width: 3rem;
     background-color: black;
     z-index: 1;
     overflow-x: hidden;
     position: fixed;
     display: flex;
-    flex-direction: column;
+    
     align-items: center;
     transition: width 1s ease;
 }
@@ -244,30 +242,17 @@ body::-webkit-scrollbar-thumb{
 .nav-link>svg{
     filter: invert(100%);
     padding: 1rem;
-}
-
-.nav-link>img{
-    padding: 0.4rem;
-    padding-left: 1rem;
+    transition: 5s ease;
 }
 
 .nav-list{
     display: flex;
-    flex-direction: column;
-    align-items: center;
     list-style: none;
     padding: 0;
     margin: 0;
     height: 100%;
 }
 
-.nav-item{
-    width: 100%;
-}
-
-.nav-item:last-child{
-    margin-top: auto;
-}
 
 .nav-link{
     display: flex;
@@ -282,15 +267,149 @@ body::-webkit-scrollbar-thumb{
     color: white;
 }
 
-.nav:hover{
-    width: 18rem;
+
+
+.nav:hover .list-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nav:hover svg{
+    filter: invert(9%) sepia(95%) saturate(3949%) hue-rotate(272deg) brightness(123%) contrast(99%);
     
 }
 
-.nav:hover .list-text{
-    display: block;
+.nav:hover img{
+    transform: rotate(360deg);
 }
 
-.nav:hover .main{
-    margin-left: 20rem;
+
+
+@media only screen and (max-width: 700px){
+    html{
+        width: 100%;
+        display: flex;
+        overflow-x: hidden;
+    }
+
+    
+
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .start_cont > div{
+        width: 70%;
+    }
+
+    .nav{
+        width: 100%;
+        flex-direction: row;
+        height: 4rem;
+        bottom: 0;
+        overflow-y: hidden;
+        position: fixed;
+
+    }
+
+    .main{
+        margin-bottom: 4.1rem;
+        padding-top: 1rem;
+    }
+
+    .nav-list{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    .card-container{
+        grid-template-columns: 1fr;
+    }
+
+    .nav-item:last-child{
+        margin: 0;
+    }
+
+    .nav-link>img{
+        padding: 0.4rem;
+        padding-left: 1rem;
+        transition: 5s;
+    }
+
+    .nav:hover .list-text{
+        display: none;
+    }
+    .start_cont{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 700px){
+    .nav{
+        height: 100vh;
+        width: 3rem;
+        top: 0;
+        flex-direction: column;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav:hover{
+        width: 18rem;
+    }
+
+    .nav:hover .list-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0.4rem;
+
+        box-sizing: border-box;
+    }
+
+    .card{
+        width: 99%;
+        box-sizing: border-box;
+    }
+
+    .main{
+        margin-left: 3.1rem;
+        padding-top: 2rem;
+    }
+
+    .nav-item:last-child{
+        margin-top: auto;
+    }
+
+    .nav-item{
+        width: 100%;
+    }
+
+    .nav-link>img{
+        padding: 0.4rem;
+        padding-left: 1rem;
+        transition: 5s;
+    }
 }
