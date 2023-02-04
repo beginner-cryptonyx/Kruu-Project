@@ -1,0 +1,171 @@
+:root{
+    font-size: 21px;
+    background-color: black;
+    color: white;
+    --accent: rgb(62, 172,171);
+    --accent2: rgb(11, 139, 137);
+    --accent3: rgb(7, 94, 92);
+    --accent4: #6CA8A7;
+    --accent5: #2e9b99;
+
+    --accent6: #098674;
+    font-family: 'Roboto Slab', serif;
+
+    --font-handwriting: 'Edu SA Beginner';
+    scroll-behavior: smooth;
+
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+
+body, html {
+    height: 100%;
+    margin: none;
+  }  
+
+.btn{
+    background-color: var(--accent);
+    color: white;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: 1rem;
+    border-radius: 10px;
+    border: white 1px solid;
+    padding: 0.7rem;
+    font-family: "Edu SA Beginner";
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.parallax{
+    /* The image used */
+    background-image: url("../images/p1.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2{
+    /* The image used */
+    background-image: url("../images/p2.png");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3{
+    /* The image used */
+    background-image: url("../images/p3.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax4{
+    /* The image used */
+    background-image: url("../images/p4.png");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax5{
+    /* The image used */
+    background-image: url("../images/p5.png");
+  
+    /* Set a specific height */
+    min-height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+span{
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+.head{
+    font-size: 4rem;
+    text-decoration: underline;
+    color: var(--accent6);
+    float: left;
+    font-family: "Edu SA Beginner";
+    font-weight: bolder;
+
+}
+
+.main{
+    background-color: black;
+    height: 25vh;
+    margin-top: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    color: white;
+}
+
+.logo > span{
+    margin-left: -1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.main>span{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.user-attention{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+}
+

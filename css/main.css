@@ -1,0 +1,296 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+:root{
+    font-size: 21px;
+    background-color: #FFFFFF;
+    color: black;
+    --accent: rgb(62, 172,171);
+    --accent2: rgb(11, 139, 137);
+    --accent3: rgb(7, 94, 92);
+    --accent4: #6CA8A7;
+    --accent5: #2e9b99;
+    font-family: 'Roboto Slab', serif;
+
+    --font-handwriting: 'Edu SA Beginner';
+    scroll-behavior: smooth;
+
+
+
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+
+.head > a{
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.start_cont{
+    display: flex;
+    align-items: center;
+}
+
+.start_cont > div{
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+.booking_container{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 0.4rem;
+    
+}
+
+.booking_indicator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    margin: 0.1rem 0 0.1rem 0;
+    padding: 0.16rem 0.2rem 0.16rem 0.2rem;
+    width: 60%;
+}
+
+.booked{
+    color: red;
+}
+
+.BookNow{
+    color: white;
+    background-color: var(--accent);
+    border-radius: 15px;
+    
+}
+
+.BookNow:hover{
+    background-color: var(--accent2);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.BookNow:active{
+    background-color: var(--accent3);
+    cursor: pointer;
+}
+
+
+
+
+.card-container{
+    display: grid;
+    margin-top: 2rem;
+}
+
+.row{display: grid; column-gap: 1.3rem; clear: both;}
+
+.card-head{
+    display: flex;
+    width: max-content;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--accent4);
+    margin-left: 0.65rem;
+    margin-top: 0.4rem;
+
+}
+
+.card-head > span{
+    margin-left: 0.5rem;
+    font-size: 150%;
+    color: white;
+}
+
+
+.content{
+    margin-top: 1rem;
+    width: 90%;
+    margin-left: 0.6rem;
+    /* margin: 1rem; */
+}
+
+.content > span{
+    color: black;
+    
+
+}
+
+.card{
+    margin: 1rem;
+    border: 1px black solid;
+    border-radius: 10px;
+    border-spacing: 10px;
+    box-sizing: border-box;
+    float: left;
+    overflow: auto;
+    box-shadow: 8px 10px 12px 01px rgba(0,0,0,0.4);
+    transition: 0.5s;
+    background-color: #f5f5f5;
+
+}
+
+.card:hover{
+    box-shadow: 20px 18px 12px 2px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+
+.card:hover .card-head > img{
+    transform: translate(-15%, -25%) rotate(-30deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover .card-head{
+    background-color: var(--accent5);
+}
+
+.txt{
+    /* margin-left: 2rem; */
+    font-size: 1.3rem;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn{
+    background-color: var(--accent);
+    color: white;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: 1.2rem;
+    border-radius: 10px;
+    border: white 1px solid;
+    padding: 0.7rem;
+    font-family: "Edu SA Beginner";
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: var(--accent2);
+    transition: 0.3ms;
+}
+
+.btn:active{
+    background-color: var(--accent3);
+}
+
+.btn-holder{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+hr{
+    margin-top: 2.9rem;
+    margin-bottom: 2.9rem;
+}
+
+
+body::-webkit-scrollbar{
+    width: 0.3rem;
+}
+
+
+body::-webkit-scrollbar-track{
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: purple;
+}
+
+.main{
+    margin-left: 3.1rem;
+    padding-top: 2rem;
+}
+
+.nav{
+    height: 100vh;
+    width: 3rem;
+    background-color: black;
+    z-index: 1;
+    overflow-x: hidden;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 1s ease;
+}
+
+.nav-link>svg{
+    filter: invert(100%);
+    padding: 1rem;
+}
+
+.nav-link>img{
+    padding: 0.4rem;
+    padding-left: 1rem;
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.nav-item{
+    width: 100%;
+}
+
+.nav-item:last-child{
+    margin-top: auto;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    text-decoration: none;
+}
+
+.list-text{
+    display: none;
+    margin-left: 1rem;
+    color: white;
+}
+
+.nav:hover{
+    width: 18rem;
+    
+}
+
+.nav:hover .list-text{
+    display: block;
+}
+
+.nav:hover .main{
+    margin-left: 20rem;
+}
