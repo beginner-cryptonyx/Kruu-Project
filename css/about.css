@@ -61,13 +61,8 @@ body, html {
 }
 
 .parallax2{
-    /* The image used */
     background-image: url("../images/p2.png");
-  
-    /* Set a specific height */
     min-height: 500px;
-  
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -75,13 +70,8 @@ body, html {
 }
 
 .parallax3{
-    /* The image used */
     background-image: url("../images/p3.jpg");
-  
-    /* Set a specific height */
     min-height: 500px;
-  
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -89,13 +79,9 @@ body, html {
 }
 
 .parallax4{
-    /* The image used */
     background-image: url("../images/p4.png");
-  
-    /* Set a specific height */
+
     min-height: 500px;
-  
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -103,13 +89,8 @@ body, html {
 }
 
 .parallax5{
-    /* The image used */
     background-image: url("../images/p5.png");
-  
-    /* Set a specific height */
     min-height: 500px;
-  
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -166,6 +147,36 @@ span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 25vh;
+    max-height: 25vh;
+    min-height: fit-content;
 }
 
+.btn-container{
+    display: flex;
+}
+
+
+@media only screen and (max-width:700px) {
+    .parallax, .parallax2, .parallax3, .parallax4, .parallax5{
+        display: none;
+    }
+
+    .main{
+        flex-direction: column;
+        margin-top: 15rem;
+    }
+
+    .user-attention{
+        margin-top: 20rem;
+        text-align: center;
+
+    }
+
+    .btn-container{
+        flex-direction: column;
+    }
+
+    .logo{
+        top: 0;
+    }
+}

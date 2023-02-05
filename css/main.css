@@ -59,6 +59,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(5, 1fr);
     row-gap: 0.4rem;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
@@ -71,18 +74,22 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-weight: bold;
     border: none;
     margin: 0.1rem 0 0.1rem 0;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
     padding: 0.16rem 0.2rem 0.16rem 0.2rem;
     width: 60%;
 }
 
 .booked{
     color: red;
+
 }
 
 .BookNow{
     color: white;
     background-color: var(--accent);
     border-radius: 15px;
+    
     
 }
 
@@ -184,12 +191,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-weight: bold;
     font-size: 1.7rem;
     margin: 1.2rem;
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
     border-radius: 10px;
     border: white 1px solid;
     padding: 0.7rem;
     font-family: "Edu SA Beginner";
     cursor: pointer;
     text-decoration: none;
+    text-align: center;
 }
 
 .btn:hover{
@@ -227,7 +237,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-
 .nav{
     background-color: black;
     z-index: 1;
@@ -243,6 +252,7 @@ body::-webkit-scrollbar-thumb{
     filter: invert(100%);
     padding: 1rem;
     transition: 5s ease;
+
 }
 
 .nav-list{
@@ -351,6 +361,21 @@ body::-webkit-scrollbar-thumb{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .booking_indicator{
+        margin-left: 0.1rem;
+        margin-right: 0.1rem;
+        font-size: 0.8rem;
+    }
+
+    .booked{
+        font-size: 0.5rem;
+        transform: rotate(90deg);
+    }
+
+    .BookNow{
+        padding: 0.2rem;
     }
 
 }

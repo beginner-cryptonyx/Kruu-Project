@@ -68,22 +68,26 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .cred{
     display: flex;
     border-radius: 0.8rem;
-    background: rgb(0,17,106);
-    background: radial-gradient(circle, rgba(0,17,106,1) 0%, rgba(113,15,227,1) 35%, rgba(139,0,255,1) 64%, rgba(0,17,106,1) 96%, rgba(0,0,0,1) 100%);
-}
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(4,0,85,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(4,0,85,1) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(4,0,85,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#040055",GradientType=1);
+    }
 
 ::placeholder{
-    color: black;
+    color: white;
     opacity: 0.6;
     font-size: 13pt;
 }
 
 ::ms-input-placeholder{
-    color: black;
+    color: white;
 }
 
 input:focus{
     border-bottom: var(--accent2) solid 1px;
+    color: white;
 }
 
 form{
