@@ -1,0 +1,46 @@
+@import url(../css/main.css);
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    color: green;
+    font-size: large;
+    font-size: 30px;
+    transition: 2s;
+}
+
+.btn{
+    background-color: rgb(0, 141, 206);
+    margin-top: 3rem;
+}
+
+.btn:hover{background-color: rgb(0, 130, 200);}
+.btn:active{background-color: rgb(0, 120, 180);}
+
+
+.hidden{
+    display: none;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+input{
+    outline: none;
+    margin-top: 0.3rem;
+    font-size: 13pt;
+    padding: 0.6rem;
+    margin-bottom: 2rem;
+    width: 90vw;
+    margin-top: 1rem;
+}
+

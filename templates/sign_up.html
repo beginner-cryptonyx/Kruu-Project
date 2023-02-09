@@ -1,36 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/signup.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/signup.css" />
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
 
-    
-    <title>Sign up</title>
+  <title>Sign up</title>
 </head>
+
 <body>
+  <div class="expand-nav" style="display: flex; justify-content: flex-start; color:white; align-items: center;">☰
+  <nav class="nav">
+    <ul class="nav-list">
+      <li class="nav-item" style="margin-bottom: 1rem; font-size: 1.5rem">
+        <a href="../index.html" class="nav-link">
+          <img src="../images/reallogo.png" alt="logo" width="40px" />
+          ‎ ‎ ‎ Vaccinejet.org
+        </a>
+      </li>
 
-    <div class="container">
-        <div class="form">x</div>
-        <div class="cred-container">
-            <div class="cred">
-                <form action="" method="post">
-                    <input type="text" name="email" id="email/phone" placeholder="Email Or Phone Number">
-                    <input type="text" name="email" id="password" placeholder="Password">
+      <li class="nav-item">
+        <a href="../index.html#range" class="nav-link"> View Products </a>
+      </li>
 
+      <li class="nav-item">
+        <a href="./templates/sign_up.html" class="nav-link">
+          Know Your Vaccine</a
+        >
+      </li>
 
-                    <a href="../main.html" class="btn">Sign Up</a>
-                </form>
+      <li class="nav-item" style="margin-right:1.4rem;">
+        <a href="../templates/about.html" class="nav-link"> About us </a>
+      </li>
 
-            </div>
+    </ul>
+  </nav>
+</div>
+  <div class="container">
+    <div class="form">
+      <div class="form-container" id="container">
+        <div class="title" id="title">
+          <h1>To Register, We Need Few More Details</h1>
+          <a class="btn" id="start_btn">Continue Registration</a>
         </div>
+
+        <div class="hidden" id="name">
+          <div id="__name">
+            <label for="name" class="form-label">
+              First Name
+              <input type="text" class="form-input" />
+            </label>
+
+            <label class="form-label">
+              Last Name
+              <input type="text" class="form-input" />
+            </label>
+          </div>
+
+          <div id="___name">
+            <div class="dropdown">
+              <button class="dropdownbtn" id="gender-btn" onclick="toggle('gender')">
+                Select Gender ▼
+              </button>
+              <div class="content" id="gender">
+                <a onclick="dropdown_react('gender-btn', 'male ▼')">Male</a>
+                <a onclick="dropdown_react('gender-btn', 'Female ▼')">Female</a>
+                <a onclick="dropdown_react('gender-btn', 'Other ▼')">Other</a>
+              </div>
+            </div>
+
+            <div class="pregnant" >
+              Are You Due to Have A child
+              <div class="radio_placeholder radio-align">
+                <label class="radio">
+                  Yes
+                  <input type="radio" id="" name="pregnant" />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="radio">
+                  No
+                  <input type="radio" id="" name="pregnant" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <center>
+            <a class="btn" id="name_btn">Continue</a>
+          </center>
+        </div>
+
+        <div class="travel hidden" style="font-size: 1.4rem" id="travel">
+            Have you travelled to a risk country in the near past?
+            <div class="radio_placeholder">
+            <label class="radio">
+              Yes
+              <input type="radio" name="travel_past" id="" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="radio" style="margin-bottom: 2rem">
+              No
+              <input type="radio" name="travel_past" id="" />
+              <span class="checkmark"></span>
+            </label>
+            </div>
+            Are you going to travel to a risk country in the near future?
+            <div class="radio_placeholder">
+            <label class="radio">
+              Yes
+              <input type="radio" name="travel" id="" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="radio">
+              No
+              <input type="radio" name="travel" id="" />
+              <span class="checkmark"></span>
+            </label>
+            </div>
+
+          <center>
+            <a class="btn" id="travel_btn">Continue</a>
+          </center>
+        </div>
+
+        <div class="allergy hidden" id="allergy">
+          <label> Do You Have Any Alergies?</label>
+          <center>
+            <textarea name="" id="" rows="10" cols="100" wrap="hard" style="margin-bottom: 2rem" placeholder></textarea>
+          </center>
+
+          Have you undergone a blood transfusion?
+          <div class="radio_placeholder">
+            <label class="radio">
+              Yes
+              <input type="radio" name="transfusion" id="" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="radio" style="margin-bottom: 2.5rem">
+              No
+              <input type="radio" name="transfusion" id="" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+          Are you immunocompromised or immunosuppressed?
+          <div class="radio_placeholder">
+            <label class="radio">
+              Yes
+              <input type="radio" name="immunosuppressed" id="" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="radio" style="margin-bottom: 2.5rem">
+              No
+              <input type="radio" name="immunosuppressed" id="" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+          <center>
+            <a class="btn" id="allergy_btn">Continue</a>
+          </center>
+        </div>
+
+        <div id="med-history" class="hidden">
+          Do You Have a Chronic Disease
+          <label class="radio">
+            Yes
+            <input type="radio" name="chronic" id="chronicyes">
+            <span class="checkmark"></span>
+          </label>
+          <label class="radio">
+            No
+            <input type="radio" name="chronic" id="chronicno">
+            <span class="checkmark"></span>
+          </label>
+
+
+          <div class="chronic_container hidden" id="chronic_container">
+            <p style="padding-top: 1.4rem;">Kindly indicate any chronic health conditions you have</p>
+            <label class="checkbox">
+              Lung Disease
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkbox">
+              Heart Disease
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkbox">
+              Renal Disease
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkbox">
+              HIV
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkbox">
+              Diabetes
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkbox">
+              Asplenia
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkbox">
+              Other
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        <p style="margin-top: 1.4rem;"> Is there a history of any genetic conditions in your family?</p>
+          <label class="radio">
+            Yes
+            <input type="radio" name="gdisease">
+            <span class="checkmark"></span>
+          </label>
+          <label class="radio">
+            No
+            <input type="radio" name="gdisease">
+            <span class="checkmark"></span>
+          </label>
+
+          <center>
+            <a class="btn" id="med-continue">Continue</a>
+          </center>
+          
+        </div>
+
+
+        <div id="vaccineQ" class="hidden">
+          <div class="dropdown">
+            <button class="dropdownbtn" id="vaccine-btn" onclick="toggle('vaccine')">
+              What was your last vaccine? ▼
+            </button>
+            <div class="content" id="vaccine">
+              <a onclick="dropdown_react('vaccine-btn', 'Influenza ▼')">Influenza</a>
+              <a onclick="dropdown_react('vaccine-btn', 'Covid 19 ▼')">Covid 19</a>
+              <a onclick="dropdown_react('vaccine-btn', 'HPV ▼')">HPV</a>
+              <a onclick="dropdown_react('vaccine-btn', 'Tdap ▼')">Tdap</a>
+              <a onclick="dropdown_react('vaccine-btn', 'Varicella ▼')">Varicella</a>
+              <a onclick="dropdown_react('vaccine-btn', 'Zoster ▼')">Zoster</a>
+              <a onclick="dropdown_react('vaccine-btn', 'Yellow Fever ▼')">Yellow Fever</a>
+              <a onclick="dropdown_react('vaccine-btn', 'Cholera ▼')">Cholera</a>
+              <a onclick="dropdown_react('vaccine-btn', 'Hepatitis A ▼')">Hepatitis A</a>
+              <a onclick="dropdown_react('vaccine-btn', 'Hepatitis B ▼')">Hepatitis B</a>
+              <a onclick="dropdown_react('vaccine-btn', 'Typhoid ▼')">Typhoid</a>
+              <a onclick="dropdown_react('vaccine-btn', 'Rabies ▼')">Rabies </a>
+            </div>
+          </div>
+
+          Did you face any side-effects?
+          <label class="radio">
+            Yes
+            <input type="radio" id="sideeffyes" name="side">
+            <span class="checkmark"></span>
+          </label>
+          <label class="radio">
+            No
+            <input type="radio" id="sideeffno" name="side">
+            <span class="checkmark"></span>
+          </label>
+
+          <label id="sideeffans" class="form-label" style="margin-top: 1.4rem; display:none">
+            Side Effects
+            <input type="text" class="form-input" />
+          </label>
+
+          <center>
+            <a class="btn" id="sideeff_btn">Continue</a>
+          </center>
+        </div>
+
+
+
+        <div id="addictions" class="hidden">
+          <div class="addiction-container" id="addiction-container">
+            <div class="alcohol">
+              Do you drink alcohol?
+              <div class="radio_placeholder radio-align">
+                <label class="radio">
+                  Yes
+                  <input type="radio" id="alcoholyes" name="alcohol">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="radio">
+                  No
+                  <input type="radio" id="alcoholno" name="alcohol">
+                  <span class="checkmark"></span>
+                </label>
+
+                <div id="ifyes" class="hidden">
+                  How often do you drink alcohol
+                  <label class="radio">
+                    Rarely
+                    <input type="radio" name="alcoholfrq">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio">
+                    Occasionally
+                    <input type="radio" name="alcoholfrq">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio">
+                    Once in a month
+                    <input type="radio" name="alcoholfrq">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio">
+                    Once in a week
+                    <input type="radio" name="alcoholfrq">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio">
+                    Alternate days
+                    <input type="radio" name="alcoholfrq">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio">
+                    Everyday
+                    <input type="radio" name="alcoholfrq">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio">
+                    Multiple time a day
+                    <input type="radio" name="alcoholfrq">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              
+            </div>
+          
+
+            <div class="smoking">
+              Do You smoke?
+              <div class="radio_placeholder radio-align">
+                <label class="radio">
+                  Yes
+                  <input type="radio" id="smokingyes" name="smoking">
+                  <span class="checkmark"></span>
+                </label>
+                <label class="radio">
+                  No
+                  <input type="radio" id="smokingno" name="smoking">
+                  <span class="checkmark"></span>
+                </label>
+
+                <div id="ifyessmoking" class="hidden">
+                  How often do you smoke
+                  <label class="radio">
+                    Rarely
+                    <input type="radio" name="smokingfrq">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio">
+                    Occasionally
+                    <input type="radio" name="smokingfrq">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio">
+                    Once in a month
+                    <input type="radio" name="smokingfrq">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio">
+                    Once in a week
+                    <input type="radio" name="smokingfrq">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio">
+                    Alternate days
+                    <input type="radio" name="smokingfrq">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio">
+                    Everyday
+                    <input type="radio" name="smokingfrq">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio">
+                    Multiple time a day
+                    <input type="radio" name="smokingfrq">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <center>
+            <a class="btn" id="addict_btn">Continue</a>
+          </center>
+        </div>
+
+      <div class="concent hidden" id="concent">
+        <a class="btn" style="padding: 1rem;" href="../index.html">give concent for vaccine delivery</a>
+        <a class="btn" id="">No do not give my concent</a>
+      </div>
+
+
+
+      </div>
     </div>
-    
+    <div class="cred-container">
+      <div class="cred">
+        <form action="" method="post">
+          <input type="text" name="email" id="email/phone" placeholder="Email Or Phone Number" />
+          <input type="password" name="email" id="password" placeholder="Password" />
+
+          <a href="../main.html" class="btn">Sign Up</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="../js/sign_up.js"></script>
+  <script src="../js/dropdown.js"></script>
 </body>
+
 </html>

@@ -1,100 +1,104 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
+@import url("../css/main.css");
 
-:root{
-    font-size: 21px;
-    background-color: #FFFFFF;
-    color: black;
-    --accent: rgb(62, 172,171);
-    --accent2: rgb(11, 139, 137);
-    --accent3: rgb(7, 94, 92);
-    --accent4: #6CA8A7;
-    --accent5: #2e9b99;
-    font-family: 'Roboto Slab', serif;
-
-    --font-handwriting: 'Edu SA Beginner';
-    scroll-behavior: smooth;
-
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 
 
-.cred{
-    background-image: url("");
-    background-color: #2e9b99;
-
-}
-
-.cred-container{
-    background-image: url("../images/vaccine.jpeg");
+.cred-container {
+    background-image: url("../images/vaccine.png");
     /* background-attachment: fixed; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    justify-content: center;
+    align-items: center;
 }
 
-.btn{
+.btn {
     background-color: var(--accent);
     color: white;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin: 1.2rem;
     border-radius: 18px;
     border: white 1px solid;
     padding: 0.7rem;
     padding-left: 0.2rem;
-    padding-right: 0.5rem;
-    font-family: "Edu SA Beginner";
+    padding-right: 0.7rem;
+    font-family: "Roboto Sans";
     cursor: pointer;
     text-decoration: none;
     text-align: center;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--accent2);
     transition: 0.3ms;
 }
 
-.btn:active{
+.btn:active {
     background-color: var(--accent3);
 }
 
-.cred{
+.cred {
     display: flex;
-    border-radius: 0.8rem;
-    background: rgb(0,0,0);
-    background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(4,0,85,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(4,0,85,1) 100%);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(4,0,85,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#040055",GradientType=1);
-    }
+    border-radius: 0.9rem;
+    background: rgba(0, 0, 0, 0.7);
+    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(4, 0, 85, 0.7) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(4, 0, 85, 0.7) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(4, 0, 85, 0.7) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#040055", GradientType=1);
+    backdrop-filter: blur(1px);
+    justify-content: center;
+    align-items: center;
 
-::placeholder{
+}
+
+
+.cred>form {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--accent3);
+    margin: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+
+
+
+}
+
+
+.cred>form>input::placeholder {
     color: white;
     opacity: 0.6;
     font-size: 13pt;
 }
 
-::ms-input-placeholder{
+.cred>form>input::ms-input-placeholder {
     color: white;
 }
 
-input:focus{
+.cred>form>input:focus {
     border-bottom: var(--accent2) solid 1px;
     color: white;
 }
 
-form{
+.cred>form {
     display: flex;
+    flex-direction: column;
 }
 
-input{
+.cred>form>input {
     background: none;
     outline: none;
     border: none;
@@ -108,51 +112,513 @@ input{
 
 
 
+.form {
+    display: flex;
+    background-color: var(--accent6);
+    flex-direction: column;
+    align-items: center;
+
+}
 
 
+.form>form>input,
+.half-container>.container>input {
+    outline: none;
+    margin-top: 0.3rem;
+    font-size: 13pt;
+    padding: 0.6rem;
+    margin-bottom: 2rem;
+}
 
+
+.form>form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.form>label {
+
+    text-align: start;
+
+}
+
+.half-container>.container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.half-container>.container:last-child {
+    margin-left: auto;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.title {
+    color: green;
+    font-size: large;
+    font-size: 30px;
+    transition: 2s;
+    text-align: center;
+}
+
+.btn {
+    background-color: rgb(0, 141, 206);
+    margin-top: 3rem;
+}
+
+.btn:hover {
+    background-color: rgb(0, 130, 200);
+}
+
+.btn:active {
+    background-color: rgb(0, 120, 180);
+}
+
+
+.hidden {
+    display: none;
+}
+
+.form-label {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.form-input {
+    outline: none;
+    margin-top: 0.3rem;
+    font-size: 13pt;
+    padding: 0.6rem;
+    margin-bottom: 2rem;
+    width: 40vw;
+    margin-top: 1rem;
+}
+
+.dropdownbtn {
+    background-color: darkcyan;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+
+}
+
+.dropdown {
+    margin-right: 3rem;
+}
+
+.dropdownbtn:hover {
+    background-color: rgb(9, 150, 150);
+}
+
+.dropdownbtn:active {
+    background-color: rgb(16, 136, 136)
+}
+
+.content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    box-sizing: border-box;
+    max-width: fit-content;
+    cursor: pointer;
+    height: 20vh;
+    overflow-y: scroll;
+
+}
+
+
+.content::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+.content::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: purple;
+}
+
+.content>a {
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+    outline: 0.2px solid black;
+}
+
+
+.content a:hover {
+    background-color: rgb(194, 194, 194);
+    color: purple;
+}
+
+.show {
+    display: block;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radio {
+
+    display: flex;
+    position: relative;
+    padding-left: 3rem;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+    margin-top: 0.5rem;
+
+}
+
+.radio .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+
+.radio:hover input[type="radio"]~.checkmark {
+    background-color: #ccc;
+}
+
+.radio input[type="radio"]:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.radio .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio input[type="radio"]:checked~.checkmark:after {
+    display: block;
+}
+
+.radio .checkmark:after {
+    top: 7px;
+    left: 7px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: white;
+}
+
+#med-history {
+    flex-direction: column;
+}
+
+
+.checkbox {
+    display: block;
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin-top: 0.5rem;
+    user-select: none;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.checkbox:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.checkbox input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.nav {
+    height: 0vh;
+    transition: 0.4s ease 0.1ms;
+    opacity: 0;
+}
+
+.nav>.nav-list {
+    height: 0vh;
+    transition: 0.4s ease 0.1ms;
+    opacity: 0;
+}
+
+.nav-item {
+    display: none
+}
+
+.expand-nav {
+    background-color: var(--accent3);
+    width: 100vw;
+    height: 2vh;
+}
+
+.expand-nav:hover .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    height: auto;
+    opacity: 1;
+}
+
+.expand-nav:hover .nav-item {
+    display: flex;
+}
+
+.expand-nav:hover .nav>.nav-list {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    height: auto;
+    opacity: 1;
+}
+
+.expand-nav:hover {
+    display: none;
+    transition: 0.5s ease;
+}
 
 @media only screen and (max-width: 700px) {
-    html{
+    .container {
         display: flex;
+        flex-direction: column-reverse;
+        width: 100vw;
     }
+
+    .cred-container {
+        width: auto;
+        background-size: 100vw;
+    }
+
+    .cred>form {
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        opacity: 0.95;
+    }
+
+    .cred {
+        background: none;
+        backdrop-filter: none;
+    }
+
+    .cred>form>input:focus .cred {
+        opacity: 1;
+    }
+
+    #name_btn,
+    #travel_btn,
+    #allergy_btn {
+        width: 80%
+    }
+
+    #__name {
+        flex-direction: column;
+    }
+
+    #__name>label,
+    #__name>label>input[type='text'] {
+        width: 90vw;
+    }
+
+    #___name {
+        flex-direction: column;
+    }
+
+    #___name>text {
+        text-align: center;
+    }
+
+
+    #___name>.pregnant:nth-child(2) {
+        margin-top: 3rem;
+    }
+
+    #___name>.dropdown {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .travel {
+        text-align: center;
+
+    }
+
+    .radio_placeholder {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: fit-content;
+
+    }
+
+    .allergy {
+        text-align: center;
+    }
+
+
+    textarea {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        width: 90%;
+    }
+
+
 }
 
 @media only screen and (min-width: 700px) {
-    .container{
+    .container {
         display: flex;
-        height: 100vh;
+        height: 98vh;
     }
 
-    .cred-container{
-        width:40vw;
+    .cred-container {
+        width: 40vw;
         box-sizing: border-box;
     }
 
-    .form{
+    .form {
         width: 60vw;
-        background-color: red;
     }
 
-    .cred{
+    .cred {
         margin: 2rem;
-        margin-top: 2rem;
-        
+        margin-top: 5rem;
+
     }
 
-    .cred>form{
+    .cred>form>input {
+        width: 25vw;
 
+    }
+
+    .multi {
+        width: 50vw;
+    }
+
+    .half-container>.container>input {
+        width: 20vw;
+    }
+
+    .half>label {
+        width: 20vw;
+    }
+
+    .half-container {
+        display: flex;
+        width: 50vw;
+        flex-direction: row;
+    }
+
+    #name_btn,
+    #travel_btn {
+        width: 60%;
+    }
+
+    #__name>label>input[type='text'],
+    #__name>label {
+        width: 20vw;
+    }
+
+    .alcohol,
+    .smoking {
+        width: 29rem;
+        display: flex;
         flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-        margin: 2rem;
-        
+        justify-content: center;
+        align-items: center;
     }
 
-    input{
-        width: 27vw;
-
+    #addictions {
+        flex-direction: column;
     }
 
-    
+    #addictions>.btn {
+        width: 30vw;
+    }
+
+    .addiction-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 60vw;
+    }
+
+    .concent {
+        flex-direction: row;
+    }
+
 }

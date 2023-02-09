@@ -1,4 +1,58 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption {
     margin: 0;
     padding: 0;
     border: 0;
@@ -8,16 +62,18 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     background: transparent;
 }
 
-:root{
-    font-size: 21px;
+:root {
+    font-size: 16px;
     background-color: #FFFFFF;
     color: black;
-    --accent: rgb(62, 172,171);
+    --accent: rgb(62, 172, 171);
     --accent2: rgb(11, 139, 137);
     --accent3: rgb(7, 94, 92);
     --accent4: #6CA8A7;
     --accent5: #2e9b99;
+    --accent6: #aab5db;
     font-family: 'Roboto Slab', serif;
+
 
     --font-handwriting: 'Edu SA Beginner';
     scroll-behavior: smooth;
@@ -26,9 +82,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 }
 
+body {
+    background-color: whitesmoke;
+}
 
-
-.head{
+.head {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,7 +94,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 
-.head > a{
+.head>a {
     justify-content: flex-end;
     margin-left: auto;
     margin-right: 1rem;
@@ -44,28 +102,32 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     color: black;
 }
 
-.start_cont{
+.start_cont {
     display: flex;
     align-items: center;
+    padding: 0.3rem;
+    padding-top: 2rem;
 }
 
-.start_cont > div{
+.start_cont>div {
     padding: 1rem;
     font-size: 1.3rem;
 }
 
-.booking_container{
+.booking_container {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    row-gap: 0.4rem;
-    max-width: fit-content;
-    margin-left: auto;
+    row-gap: 0.4em;
+    min-width: fit-content;
     margin-right: auto;
-    
+    margin-left: auto;
+    font-size: 1em;
+    width: 80%;
+
 }
 
-.booking_indicator{
+.booking_indicator {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,46 +135,48 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     text-align: center;
     font-weight: bold;
     border: none;
-    margin: 0.1rem 0 0.1rem 0;
-    margin-left: 1.2rem;
-    margin-right: 1.2rem;
-    padding: 0.16rem 0.2rem 0.16rem 0.2rem;
+    margin: 0.1em 0 0.1em 0;
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+    padding: 1em 0.5em 1em 0.5em;
     width: 60%;
+    font-family: "Roboto Slab";
+    /* white-space: nowrap; */
 }
 
-.booked{
+.booked {
     color: red;
 
 }
 
-.BookNow{
+.BookNow {
     color: white;
     background-color: var(--accent);
     border-radius: 15px;
-    
-    
+
+
 }
 
-.BookNow:hover{
+.BookNow:hover {
     background-color: var(--accent2);
     cursor: pointer;
     transition: 0.2s;
 }
 
-.BookNow:active{
+.BookNow:active {
     background-color: var(--accent3);
     cursor: pointer;
 }
 
 
-.card-container{
+.card-container {
     display: grid;
     margin-top: 2rem;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.row{display: grid; column-gap: 1.3rem; clear: both;}
 
-.card-head{
+.card-head {
     display: flex;
     width: max-content;
     padding: 0.8rem;
@@ -125,14 +189,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 }
 
-.card-head > span{
+.card-head>span {
     margin-left: 0.5rem;
     font-size: 150%;
     color: white;
 }
 
 
-.content{
+.content {
     margin-top: 1rem;
     width: 90%;
     margin-left: 0.6rem;
@@ -141,13 +205,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     /* margin: 1rem; */
 }
 
-.content > span{
+.content>span {
     color: black;
-    
+
 
 }
 
-.card{
+.card {
     margin: 1rem;
     border: 1px black solid;
     border-radius: 10px;
@@ -155,28 +219,28 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     box-sizing: border-box;
     float: left;
     overflow: auto;
-    box-shadow: 8px 10px 12px 01px rgba(0,0,0,0.4);
+    box-shadow: 8px 10px 12px 01px rgba(0, 0, 0, 0.4);
     transition: 0.5s;
     background-color: #f5f5f5;
     max-width: fit-content;
 
 }
 
-.card:hover{
-    box-shadow: 20px 18px 12px 2px rgba(0,0,0,0.4);
+.card:hover {
+    box-shadow: 20px 18px 12px 2px rgba(0, 0, 0, 0.4);
     cursor: pointer;
 }
 
-.card:hover .card-head > img{
+.card:hover .card-head>img {
     transform: translate(-15%, -25%) rotate(-30deg);
     transition: all 0.3s ease-in-out;
 }
 
-.card:hover .card-head{
+.card:hover .card-head {
     background-color: var(--accent5);
 }
 
-.txt{
+.txt {
     /* margin-left: 2rem; */
     font-size: 1.3rem;
     text-align: center;
@@ -185,7 +249,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin-bottom: 1.5rem;
 }
 
-.btn{
+.btn {
     background-color: var(--accent);
     color: white;
     font-weight: bold;
@@ -202,239 +266,182 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     text-align: center;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--accent2);
     transition: 0.3ms;
 }
 
-.btn:active{
+.btn:active {
     background-color: var(--accent3);
 }
 
-.btn-holder{
+.btn-holder {
     display: flex;
     width: 100%;
     justify-content: center;
 }
 
-hr{
+hr {
     margin-top: 2.9rem;
     margin-bottom: 2.9rem;
 }
 
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     width: 0.3rem;
 }
 
 
-body::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track {
     background: black;
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
     background: purple;
 }
 
 
-.nav{
-    background-color: black;
-    z-index: 1;
-    overflow-x: hidden;
-    position: fixed;
+
+.collapsible {
+    width: 100%;
     display: flex;
-    
-    align-items: center;
-    transition: width 1s ease;
-}
-
-.nav-link>svg{
-    filter: invert(100%);
-    padding: 1rem;
-    transition: 5s ease;
-
-}
-
-.nav-list{
-    display: flex;
-    list-style: none;
-    padding: 0;
+    outline: none;
+    border: none;
+    min-height: fit-content;
+    font-size: 2rem;
     margin: 0;
-    height: 100%;
+    border-radius: 0rem;
+    background-color: var(--accent3);
+
 }
 
 
-.nav-link{
+.nav {
     display: flex;
+    width: 100%;
+    background-color: var(--accent3);
     align-items: center;
-    height: 5rem;
-    text-decoration: none;
-}
-
-.list-text{
-    display: none;
-    margin-left: 1rem;
-    color: white;
-}
-
-
-
-.nav:hover .list-text{
-    display: flex;
     justify-content: center;
+    position: sticky;
+    top: 0;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
+    width: 100%;
+    background-color: var(--accent);
+
+}
+
+.nav-item {
+    text-decoration: none;
+    list-style: none;
+    padding: 0.4rem;
+    margin-left: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: centerx;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 
-.nav:hover svg{
-    filter: invert(9%) sepia(95%) saturate(3949%) hue-rotate(272deg) brightness(123%) contrast(99%);
-    
+
+.nav-link {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+
 }
 
-.nav:hover img{
-    transform: rotate(360deg);
+.nav-item:first-child {
+    margin-right: auto;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item:last-child {
+    margin-right: 1rem;
+}
+
+.sign-up-ref {
+    background-color: var(--accent2);
+    padding-right: 1.7rem;
+    padding-left: 1.7rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    border: white solid 2px;
+    border-radius: 1.3rem;
 }
 
 
 
-@media only screen and (max-width: 700px){
-    html{
+
+
+
+
+@media only screen and (max-width:700px) {
+    html {
         width: 100%;
         display: flex;
         overflow-x: hidden;
     }
 
-    
-
-
-    img{
-        max-width: 100%;
-        height: auto;
-    }
-
-    .start_cont > div{
-        width: 70%;
-    }
-
-    .nav{
-        width: 100%;
-        flex-direction: row;
-        height: 4rem;
-        bottom: 0;
-        overflow-y: hidden;
-        position: fixed;
-
-    }
-
-    .main{
-        margin-bottom: 4.1rem;
-        padding-top: 1rem;
-    }
-
-    .nav-list{
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto;
-        
-    }
-
-    .card-container{
-        grid-template-columns: 1fr;
-    }
-
-    .nav-item:last-child{
-        margin: 0;
-    }
-
-    .nav-link>img{
-        padding: 0.4rem;
-        padding-left: 1rem;
-        transition: 5s;
-    }
-
-    .nav:hover .list-text{
-        display: none;
-    }
-    .start_cont{
+    .start_cont {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
-    .booking_indicator{
+    .image>img {
+        max-width: 90vw;
+    }
+
+    .booking_indicator {
         margin-left: 0.1rem;
         margin-right: 0.1rem;
         font-size: 0.8rem;
     }
 
-    .booked{
+    .BookNow {
+        padding: 0.2rem;
+    }
+
+    .booked {
         font-size: 0.5rem;
         transform: rotate(90deg);
     }
 
-    .BookNow{
-        padding: 0.2rem;
+    .nav {
+        display: none;
     }
 
-}
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
 
-
-
-@media only screen and (min-width: 700px){
-    .nav{
-        height: 100vh;
-        width: 3rem;
-        top: 0;
-        flex-direction: column;
     }
 
-    .nav-list{
-        flex-direction: column;
-        align-items: center;
+    .booking_container {
+        max-width: 100vw;
+
+
     }
 
-    .nav:hover{
-        width: 18rem;
+    .booked {
+        font-weight: lighter;
     }
 
-    .nav:hover .list-text{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .card-container{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 0.4rem;
-
-        box-sizing: border-box;
-    }
-
-    .card{
-        width: 99%;
-        box-sizing: border-box;
-    }
-
-    .main{
-        margin-left: 3.1rem;
-        padding-top: 2rem;
-    }
-
-    .nav-item:last-child{
-        margin-top: auto;
-    }
-
-    .nav-item{
-        width: 100%;
-    }
-
-    .nav-link>img{
-        padding: 0.4rem;
-        padding-left: 1rem;
-        transition: 5s;
+    .body {
+        width: 100vw;
+        min-width: fit-content;
+        margin: 0;
+        position: fixed;
     }
 }
