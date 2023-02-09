@@ -14,6 +14,7 @@
     --font-handwriting: 'Edu SA Beginner';
     scroll-behavior: smooth;
 
+
 }
 
 html,
@@ -80,6 +81,18 @@ caption {
     background: transparent;
 }
 
+body::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+
+body::-webkit-scrollbar-track {
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: purple;
+}
 
 body,
 html {

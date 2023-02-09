@@ -2,8 +2,6 @@ function isMobile() {
     return window.innerWidth <= 700;
 }
 
-
-
 const start = document.getElementById("start_btn")
 const header = document.getElementById("title")
 const _name = document.getElementById("name")

@@ -2,38 +2,40 @@
 
 
 
-.header{
+.header {
     font-size: 1.2rem;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
-.container{
+.container {
     display: grid;
     margin: 2rem;
     flex-direction: row;
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
-  }
-  
-.step_card{
+}
+
+.step_card {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: white;
     border-radius: 1rem
-    
 }
 
-.place{
+.place {
     color: white;
 }
 
-p{
+p {
     color: black;
 }
-  
-.main{
-    background-color:#007C7C;
+
+.main {
+    background-color: #007C7C;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -43,9 +45,9 @@ p{
 
 }
 
-.sub{
+.sub {
     display: flex;
-    width:90%;
+    width: 90%;
     text-align: center;
     color: grey;
     font-size: 0.9rem;
@@ -56,6 +58,121 @@ p{
     justify-content: center;
 }
 
-.img{
+.img {
     margin: 1.2rem;
+}
+
+
+
+
+.vaccine-info {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.tabs {
+    width: 20vw;
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    flex-direction: column;
+}
+
+.info-scr {
+    width: 80%;
+    background-color: white;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-container {
+    width: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+p {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.tab {
+    text-align: left;
+    width: 100%;
+    display: inline;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    font-size: 1.2rem;
+    padding-left: 1.6rem;
+    max-width: 20vw;
+
+}
+
+.tab:hover {
+    background-color: rgb(197, 197, 197);
+}
+
+.tab:active {
+    background-color: rgb(182, 182, 182);
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.vaccine-info-mobile {
+    display: none;
+    width: 98vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.collapsable {
+    width: 100%;
+    background-color: lightslategrey;
+    outline: none;
+    border: none;
+    padding: 0.8rem;
+}
+
+.collapsable:active {
+    background-color: gray;
+}
+
+
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s ease-out;
+
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .vaccine-info {
+        display: none;
+    }
+
+    .vaccine-info-mobile {
+        display: flex;
+        flex-direction: column;
+    }
 }
