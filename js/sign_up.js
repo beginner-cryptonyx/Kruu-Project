@@ -90,6 +90,17 @@ document.getElementById("chronicno").addEventListener("change", function () {
     }
 });
 
+document.getElementById("gyes").addEventListener("change", function () {
+    if (document.getElementById("gyes").checked) {
+        document.getElementById('gen_container').classList.remove('hidden')
+    }
+});
+
+document.getElementById("gno").addEventListener("change", function () {
+    if (document.getElementById("gno").checked) {
+        document.getElementById('gen_container').classList.add('hidden')
+    }
+});
 med_continue.addEventListener('click', e => {
     med.style.display = 'none'
     vacc.classList.remove("hidden")

@@ -1,4 +1,6 @@
 @import url("../css/main.css");
+@import url("../css/dropdown.css");
+@import url(./nav.css);
 
 *,
 *:before,
@@ -54,6 +56,7 @@
     backdrop-filter: blur(1px);
     justify-content: center;
     align-items: center;
+    height: 80vh;
 
 }
 
@@ -72,8 +75,7 @@
     padding-bottom: 5rem;
     margin-top: 8rem;
     margin-bottom: 8rem;
-
-
+    height: 70vh;
 
 }
 
@@ -110,11 +112,9 @@
 
 
 
-
-
 .form {
     display: flex;
-    background-color: var(--accent6);
+    background-color: #D0F7FF;
     flex-direction: column;
     align-items: center;
 
@@ -206,65 +206,8 @@
     margin-top: 1rem;
 }
 
-.dropdownbtn {
-    background-color: darkcyan;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-
-}
-
-.dropdown {
-    margin-right: 3rem;
-}
-
-.dropdownbtn:hover {
-    background-color: rgb(9, 150, 150);
-}
-
-.dropdownbtn:active {
-    background-color: rgb(16, 136, 136)
-}
-
-.content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    box-sizing: border-box;
-    max-width: fit-content;
-    cursor: pointer;
-    height: 20vh;
-    overflow-y: scroll;
-
-}
 
 
-.content::-webkit-scrollbar {
-    width: 0.2rem;
-}
-
-.content::-webkit-scrollbar-track {
-    background-color: black;
-}
-
-.content::-webkit-scrollbar-thumb {
-    background-color: purple;
-}
-
-.content>a {
-    padding: 1rem;
-    text-decoration: none;
-    color: black;
-    outline: 0.2px solid black;
-}
-
-
-.content a:hover {
-    background-color: rgb(194, 194, 194);
-    color: purple;
-}
 
 .show {
     display: block;
@@ -424,6 +367,16 @@ input[type="radio"] {
 }
 
 .expand-nav:hover .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    height: auto;
+    opacity: 1;
+}
+
+.expand-nav:active .nav {
     position: absolute;
     top: 0;
     left: 0;

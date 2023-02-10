@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/buy.css" />
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <title>Get Vaccinate</title>
+    <title>Get Vaccinated</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,11 +25,11 @@
         </li>
 
         <li class="nav-item">
-          <a href="" class="nav-link"> View Products </a>
+          <a href="../index.html#range" class="nav-link"> View Products </a>
         </li>
 
         <li class="nav-item">
-          <a href="../templates/sign_up.html" class="nav-link">
+          <a href="../templates/buy.html" class="nav-link">
             Know Your Vaccine</a
           >
         </li>
@@ -38,8 +38,24 @@
           <a href="../templates/about.html" class="nav-link"> About us </a>
         </li>
 
-        <li class="nav-item sign-up-ref">
-          <a href="#" class="nav-link"> Register / Log In </a>
+        <li class="nav-item sign-up-ref" style="margin-right: 1rem;">
+          <a href="../templates/sign_up.html" class="nav-link"> Register / Log In </a>
+          
+        </li>
+
+        <li class="nav-item">
+          <div class="dropdown" style="margin: none; margin-right: 1rem;">
+            <button class="dropdownbtn" id="morebtn" value="button text" onclick="_toggle('more')"
+            style="padding: 0rem; color: white; font-size: 2rem;">
+              ⋮
+            </button>
+            <div class="drop-content" id="more">
+              <a style="color: red;padding: 1.1rem; text-align: start; font-size: 0.8rem;">&times</a>
+              <a href="../templates/about.html">About us</a>
+              <a href="../templates/buy.html">Get a Shot</a>
+              <a href="../templates/sign_up.html">Register/Login</a>
+            </div>
+          </div>
         </li>
       </ul>
     </nav>
@@ -79,27 +95,134 @@
         </div>
         <div class="sub">Click here to learn about the vaccine certificate</div>
       </div>
-
-      
-      
       
     </div>
-    <p class="header">Vacciness We Manufacture</p>
+    <hr >
+
+      <p class="header">Comprehensive Section For Finding Out If <b>you</b> need a vaccine</p>
+
+      <div class="cond">
+        <div class="horiscroll">
+          <a class="hori-item" onclick="switch_content('diabetes', 'infocanvas', event)">Diabetes </a>
+          <a class="hori-item" onclick="switch_content('Heart_Disease', 'infocanvas', event)">Heart Disease</a>
+          <a class="hori-item" onclick="switch_content('HIV', 'infocanvas', event)">HIV</a>
+          <a class="hori-item" onclick="switch_content('lung', 'infocanvas', event)">Lung Disease</a>
+          <a class="hori-item" onclick="switch_content('liver', 'infocanvas', event)">Liver Disease</a>
+          <a class="hori-item" onclick="switch_content('renal', 'infocanvas', event)">Renal Disease</a>
+          <a class="hori-item" onclick="switch_content('weak', 'infocanvas', event)">Weakened Immune System</a>
+          <a class="hori-item" onclick="switch_content('asplenia', 'infocanvas', event)">Asplenia </a>
+        </div>
+
+        <div class="hori-content" id="info-content">
+
+        </div>
+
+        <div class="info-hori-content">
+          <div id="diabetes">
+            <ul>
+              <li><b>Influenza Vaccine</b> - to protect against seasonal flu every year</li>
+              <li><b>Hepatitis B Vaccine</b> - to protect against hepatitis B.</li>
+              <li><b>Pneumococcal Vaccine</b> - to protect against serious pneumococcal diseases.</li>
+              <li><b>Zoster Vaccine</b> - to protect against shingles.</li>
+              <li><b>Tdap Vaccine</b> - to protect against tetanus, diphtheria and whooping cough.</li>
+            </ul>
+          </div>
+          <div id="Heart_Disease">
+            <ul>
+              <li><b>Influenza Vaccine</b> - to protect against seasonal flu every year</li>
+              <li><b>Tdap Vaccine</b> - to protect against tetanus, diphtheria and whooping cough.</li>
+              <li><b>Pneumococcal Vaccine</b> - to protect against serious pneumococcal diseases.</li>
+              <li><b>Zoster Vaccine</b> - to protect against shingles.</li>
+          </ul>
+          </div>
+          <div id="HIV">
+            <ul>
+              <li><b>Influenza Vaccine</b> - to protect against seasonal flu.</li>
+              <li><b>Tdap Vaccine</b> - to protect against tetanus, diphtheria, and whooping cough.</li>
+              <li><b>Pneumococcal Vaccine(s)</b> - to protect against pneumonia and other serious pneumococcal diseases.</li>
+              <li><b>Meningococcal Conjugate Vaccine Series</b> - to protect against meningococcal disease.</li>
+              <li><b>Hepatitis A Vaccine Series</b> - to protect against hepatitis A.</li>
+              <li><b>Hepatitis B Vaccine Series</b> - to protect against hepatitis B.</li>
+              <li><b>HPV Vaccine Series</b> - to protect against human papillomavirus if you are a man or woman up to age 26 years and have not already been vaccinated. Some adults age 27 through 45 years who were not already vaccinated might choose to get HPV vaccine after speaking with their doctor about their risk for new HPV infections and possible benefits of vaccination for them.</li>
+              <li><b>MMR Vaccine</b> - to protect against measles, mumps, and rubella if you were born in 1957 or after and have not gotten this vaccine or do not have immunity to these diseases.</li>
+              <li><b>Varicella Vaccine</b> - to protect against chickenpox if you were born in 1980 or after and have not gotten two doses of this vaccine or do not have immunity to this disease .</li>
+          </ul> 
+          
+          </div>
+          <div id="lung">
+            <ul>
+              <li><b>Influenza Vaccine</b> - to protect against seasonal flu every year.</li>
+              <li><b>Tdap Vaccine</b> - to protect against tetanus, diphtheria and whooping cough.</li>
+              <li><b>Pneumococcal Vaccine</b> - to protect against serious pneumococcal diseases.</li>
+              <li><b>Zoster Vaccine</b> - to protect against shingles.</li>
+          </ul>
+          </div>
+          <div id="liver">
+            <ul>
+              <li><b>Influenza Vaccine</b> - to protect against seasonal flu.</li>
+              <li><b>Tdap vaccine</b> - to protect against tetanus, diphtheria, and whooping cough.</li>
+              <li><b>Pneumococcal Vaccine(s)</b> - to protect against pneumonia and other serious pneumococcal diseases.</li>
+              <li><b>Hepatitis B Vaccine Series</b> - to protect against hepatitis B.</li>
+              <li><b>Hepatitis A Vaccine Series</b>  to protect against hepatitis A.</li>
+              <li><b>Zoster Vaccine</b> - to protect against shingles if you are 50 years and older.</li>
+              <li><b>HPV Vaccine</b> - to protect against cancers and genital warts caused by human papillomavirus if you are an adult through age 26 years (HPV vaccine is not recommended for everyone older than age 26 years, but some adults age 27 through 45 years who are not already vaccinated may decide to get HPV vaccine after speaking with their doctor about their risk for new HPV infections and the possible benefits of vaccination. HPV vaccination in this age range provides less benefit, as more people have already been exposed to HPV.)</li>
+              <li><b>MMR Vaccine</b> - to protect against measles, mumps, and rubella if you were born in 1957 or after and have not gotten this vaccine or do not have immunity to these diseases.</li>
+              <li><b>Varicella Vaccine</b> - to protect against chickenpox if you were born in 1980 or after and have not gotten two doses of this vaccine or do not have immunity to this disease.</li>
+          </ul>
+          </div>
+          <div id="renal">
+            <ul>
+              <li><b>Influenza Vaccine</b> - to protect against seasonal flu.</li>
+              <li><b>Tdap Vaccine</b> - to protect against tetanus, diphtheria, and whooping cough.</li>
+              <li><b>Pneumococcal Vaccine(s) </b>- to protect against pneumonia and other serious pneumococcal diseases.</li>
+              <li><b>Hepatitis B Vaccine Series</b> - to protect against hepatitis B.</li>
+              <li><b>Zoster Vaccine</b> - to protect against shingles if you are 50 years and older.</li>
+              <li><b>HPV Vaccine</b> - to protect against cancers and genital warts caused by human papillomavirus if you are an adult through age 26 years (HPV vaccine is not recommended for everyone older than age 26 years, but some adults age 27 through 45 years who are not already vaccinated may decide to get HPV vaccine after speaking with their doctor about their risk for new HPV infections and the possible benefits of vaccination. HPV vaccination in this age range provides less benefit, as more people have already been exposed to HPV.)</li>
+              <li><b>MMR Vaccine</b> - to protect against measles, mumps, and rubella if you were born in 1957 or after and have not gotten this vaccine or do not have immunity to these diseases.</li>
+              <li><b>Varicella Vaccine</b> - to protect against chickenpox if you were born in 1980 or after and have not gotten two doses of this vaccine or do not have immunity to this disease.</li>
+          </ul>
+          </div>
+          <div id="weak">
+            <ul>
+              <li><b>Influenza Vaccine</b> - to protect against seasonal flu.</li>
+              <li><b>Tdap Vaccine</b> - to protect against tetanus, diphtheria, and whooping cough.</li>
+              <li><b>Pneumococcal Vaccine(s)</b> - to protect against pneumonia and other serious pneumococcal diseases.</li>
+              <li><b>HPV Vaccine</b> - to protect against cancers and genital warts caused by human papillomavirus if you are an adult through age 26 years (HPV vaccine is not recommended for everyone older than age 26 years, but some adults age 27 through 45 years who are not already vaccinated may decide to get HPV vaccine after speaking with their doctor about their risk for new HPV infections and the possible benefits of vaccination. HPV vaccination in this age range provides less benefit, as more people have already been exposed to HPV.)</li>
+          </ul>
+          </div>
+          <div id="asplenia">
+            <ul>
+              <li><b>Influenza Vaccine</b> - to protect against seasonal flu.</li>
+              <li><b>Tdap Vaccine</b> - to protect against tetanus, diphtheria, and whooping cough.</li>
+              <li><b>Hib Vaccine</b> - to protect against Haemophilus influenzae type b (Hib) if you were not previously vaccinated with the vaccine.</li>
+              <li><b>Pneumococcal Vaccine(s)</b> - to protect against pneumonia and other serious pneumococcal diseases.</li>
+              <li><b>Meningococcal Vaccines (both types)</b> - to protect against meningitis and other meningococcal disease.</li>
+              <li><b>Zoster Vaccine</b> - to protect against shingles if you are 50 years and older.</li>
+              <li><b>HPV Vaccine</b> - to protect against cancers and genital warts caused by human papillomavirus if you are an adult through age 26 years (HPV vaccine is not recommended for everyone older than age 26 years, but some adults age 27 through 45 years who are not already vaccinated may decide to get HPV vaccine after speaking with their doctor about their risk for new HPV infections and the possible benefits of vaccination. HPV vaccination in this age range provides less benefit, as more people have already been exposed to HPV.)</li>
+              <li><b>MMR Vaccine</b> - to protect against measles, mumps, and rubella if you were born in 1957 or after and have not gotten this vaccine or do not have immunity to these diseases.</li>
+              <li><b>Varicella Vaccine</b> - to protect against chickenpox if you were born in 1980 or after and have not gotten two doses of this vaccine or do not have immunity to this disease.</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+    <p class="header" style="margin-bottom: 1.4rem;">Vacciness We Manufacture</p>
   
     <div class="vaccine-info">
       <div class="tabs">
-        <a class="tab" onclick="switch_content('influenza')">Influenza </a>
-        <a class="tab" onclick="switch_content('covid')">Covid 19</a>
-        <a class="tab" onclick="switch_content('HVP')">HPV</a>
-        <a class="tab" onclick="switch_content('Tdap')">Tdap</a>
-        <a class="tab" onclick="switch_content('Varicella')">Varicella</a>
-        <a class="tab" onclick="switch_content('Zoster')">Zoster</a>
-        <a class="tab" onclick="switch_content('Yellow Fever')">Yellow Fever</a>
-        <a class="tab" onclick="switch_content('Cholera')">Cholera</a>
-        <a class="tab" onclick="switch_content('Hepatitis_A')">Hepatitis A</a>
-        <a class="tab" onclick="switch_content('Hepatitis_B')">Hepatitis B</a>
-        <a class="tab" onclick="switch_content('Typhoid')">Typhoid</a>
-        <a class="tab" onclick="switch_content('Rabies')">Rabies</a>
+        <a class="tab" onclick="switch_content('influenza','')">Influenza </a>
+        <a class="tab" onclick="switch_content('covid','')">Covid 19</a>
+        <a class="tab" onclick="switch_content('HVP','')">HPV</a>
+        <a class="tab" onclick="switch_content('Tdap','')">Tdap</a>
+        <a class="tab" onclick="switch_content('Varicella','')">Varicella</a>
+        <a class="tab" onclick="switch_content('Zoster','')">Zoster</a>
+        <a class="tab" onclick="switch_content('Yellow Fever','')">Yellow Fever</a>
+        <a class="tab" onclick="switch_content('Cholera','')">Cholera</a>
+        <a class="tab" onclick="switch_content('Hepatitis_A','')">Hepatitis A</a>
+        <a class="tab" onclick="switch_content('Hepatitis_B','')">Hepatitis B</a>
+
       </div>
 
       <div class="info-container">
@@ -235,12 +358,7 @@
 	<p><b>Always consult a doctor regarding whether you are eligible for taking the vaccine, and to help decide which vaccine is best for you.</b></p>
 
       </div>
-      <div id="Typhoid" class="hidden">
-        Tdap
-      </div>
-      <div id="Rabies" class="hidden">
-        Tdap
-      </div>
+
 
 
 
@@ -395,5 +513,6 @@
     </div>
 
     <script src="../js/buy.js"></script>
+    <script src="../js/dropdown.js"></script>
   </body>
 </html>
