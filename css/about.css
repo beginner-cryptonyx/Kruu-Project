@@ -165,6 +165,15 @@ html {
     background-size: cover;
 }
 
+.parallax6 {
+    background-image: url("../images/p6.png");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 span {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
@@ -196,13 +205,13 @@ span {
     justify-content: center;
     align-items: center;
     margin-left: 1rem;
-    color: white;
+    color: black;
 }
 
 .logo>span {
     margin-left: -1rem;
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .main>span {
@@ -230,13 +239,15 @@ span {
     .parallax2,
     .parallax3,
     .parallax4,
-    .parallax5 {
+    .parallax5,
+    .parallax6 {
         display: none;
     }
 
     .main {
         flex-direction: column;
         margin-top: 15rem;
+        margin-left: 1.4rem;
     }
 
     .user-attention {
