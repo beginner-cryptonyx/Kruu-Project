@@ -183,7 +183,7 @@ p {
 }
 
 .horiscroll::-webkit-scrollbar-track {
-    background-color: ghostwhite;
+    background-color: #CBCBCB;
 }
 
 .horiscroll::-webkit-scrollbar-thumb {

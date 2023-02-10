@@ -2,6 +2,8 @@ const canvas = document.getElementById("info-scr")
 const collapsibles = Array.from(document.getElementsByClassName("collapsable"))
 const infocanvas = document.getElementById("info-content")
 
+switch_content('diabetes', 'infocanvas', event)
+
 function switch_content(id, _screen = canvas, _event) {
     var content = document.getElementById(id).innerHTML
     var canv
