@@ -229,7 +229,7 @@ p {
 
 .hori-content>ul>li {
     margin: 0;
-    padding: 30px 0 30px 40px;
+    padding: 30px 15px 30px 40px;
     list-style: none;
     background-image: url("../images/bullet.png");
     background-repeat: no-repeat;

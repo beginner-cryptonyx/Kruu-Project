@@ -48,11 +48,8 @@
 .cred {
     display: flex;
     border-radius: 0.9rem;
-    background: rgba(0, 0, 0, 0.7);
-    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(4, 0, 85, 0.7) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(4, 0, 85, 0.7) 100%);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(4, 0, 85, 0.7) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#040055", GradientType=1);
+    background-color: black;
+    opacity: 0.8;
     backdrop-filter: blur(1px);
     justify-content: center;
     align-items: center;
@@ -390,6 +387,10 @@ input[type="radio"] {
     display: flex;
 }
 
+.expand-nav:hover .nav-item:last-child {
+    display: none;
+}
+
 .expand-nav:hover .nav>.nav-list {
     top: 0;
     left: 0;
@@ -405,6 +406,21 @@ input[type="radio"] {
 }
 
 @media only screen and (max-width: 700px) {
+    .expand-nav:hover .nav-item {
+        display: none;
+    }
+
+
+    .expand-nav:hover .nav-item:last-child {
+        display: flex;
+    }
+
+    .expand-nav:hover .nav-item:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .container {
         display: flex;
         flex-direction: column-reverse;

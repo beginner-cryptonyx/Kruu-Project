@@ -18,7 +18,7 @@
   <body>
     <nav class="nav">
       <ul class="nav-list">
-        <li class="nav-item" style="margin-bottom: 1rem; font-size: 1.5rem">
+        <li class="nav-item" style="font-size: 1.5rem">
           <a href="" class="nav-link">
             <img src="./images/reallogo.png" alt="logo" width="40px" />
             ‎ ‎ ‎ Vaccinejet.org
@@ -45,13 +45,13 @@
         </li>
 
         <li class="nav-item">
-          <div class="dropdown" style="margin: none; margin-right: 1rem;">
+          <div class="dropdown" style="margin: none; margin-right: 0rem;">
             <button class="dropdownbtn" id="morebtn" onclick="_toggle('more')"
             style="padding: 0rem; color: white; font-size: 2rem;">
               ⋮
             </button>
             <div class="drop-content" id="more">
-              <a style="color: red;padding: 1.1rem; text-align: start; font-size: 0.8rem;">&times</a>
+              <a style="color: red;padding: 1.1rem; text-align: start; font-size: 0.8rem;" id="close" onclick="exit('more')" >&times</a>
               <a href="./templates/about.html">About us</a>
               <a href="./templates/buy.html">Get a Shot</a>
               <a href="./templates/sign_up.html">Register/Login</a>
@@ -80,7 +80,7 @@
       <div style="margin-top: 1rem">
         <center>
           <div class="btn-holder">
-            <a class="btn" href="./templates/buy.html#info-content">Don't know What To Get?</a>
+            <a class="btn" href="./templates/buy.html#info-content">Don't Know What to Get?</a>
           </div>
         </center>
       </div>
@@ -99,22 +99,22 @@
         <span class="booking_indicator">Sun Feb 5</span>
 
         <span class="booking_indicator">Hepatitis B</span>
-        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html#info-scr'">Book Now</span>
+        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html'">Book Now</span>
         <span class="booking_indicator booked">Booked</span>
-        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html#info-scr'">Book Now</span>
+        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html'">Book Now</span>
         <span class="booking_indicator booked">Booked</span>
         <span class="booking_indicator booked">Booked</span>
         <span class="booking_indicator booked">Booked</span>
-        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html#info-scr'">Book Now</span>
+        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html'">Book Now</span>
 
         <span class="booking_indicator">Tdap</span>
         <span class="booking_indicator booked">Booked</span>
         <span class="booking_indicator booked">Booked</span>
-        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html#info-scr'">Book Now</span>
+        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html'">Book Now</span>
         <span class="booking_indicator booked">Booked</span>
         <span class="booking_indicator booked">Booked</span>
-        <span class="booking_indicator BookNow">Book Now</span>
-        <span class="booking_indicator BookNow">Book Now</span>
+        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html'">Book Now</span>
+        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html'">Book Now</span>
 
         <span class="booking_indicator">HPV</span>
         <span class="booking_indicator booked">Booked</span>
@@ -122,7 +122,7 @@
         <span class="booking_indicator booked">Booked</span>
         <span class="booking_indicator booked">Booked</span>
         <span class="booking_indicator booked">Booked</span>
-        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html#info-scr'">Book Now</span>
+        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html'">Book Now</span>
         <span class="booking_indicator booked">Booked</span>
 
         <span class="booking_indicator">Influenza</span>
@@ -130,9 +130,9 @@
         <span class="booking_indicator booked">Booked</span>
         <span class="booking_indicator booked">Booked</span>
         <span class="booking_indicator booked">Booked</span>
-        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html#info-scr'">Book Now</span>
+        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html'">Book Now</span>
         <span class="booking_indicator booked">Booked</span>
-        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html#info-scr'">Book Now</span>
+        <span class="booking_indicator BookNow" onclick="window.location.href='./templates/buy.html'">Book Now</span>
         </div>
       </div>
 

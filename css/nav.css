@@ -6,6 +6,7 @@
     justify-content: center;
     position: sticky;
     top: 0;
+
 }
 
 .nav-list {
@@ -21,15 +22,16 @@
 .nav-item {
     text-decoration: none;
     list-style: none;
-    padding: 0.4rem;
-    margin-left: 1.5rem;
+    padding: 0.4%;
+    margin-left: 1.5%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: centerx;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    justify-content: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
     font-weight: bold;
+    text-align: center;
 }
 
 
@@ -38,7 +40,7 @@
     text-decoration: none;
     text-align: center;
     color: white;
-
+    padding: 0.2rem
 }
 
 .nav-item:first-child {
@@ -52,19 +54,34 @@ a {
 }
 
 .nav-item:last-child {
-    margin-right: 1rem;
     display: none;
+    margin-right: 1rem;
     color: white;
     font-size: 2rem;
+    ;
 }
+
+.morebtn {
+    background-color: var(--accent)
+}
+
+.nav-item>.dropdown>.dropdownbtn {
+    background-color: var(--accent)
+}
+
 
 @media only screen and (max-width: 700px) {
     .nav {
         width: 100vw;
+        height: fit-content;
     }
 
     .nav-item:last-child {
         display: flex;
+    }
+
+    .nav-list {
+        align-items: stretch;
     }
 
     .nav-item {
@@ -73,5 +90,7 @@ a {
 
     .nav-item:first-child {
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
